@@ -3,4 +3,6 @@ from django.http import HttpResponse
 
 # Create your views here.
 def index(request):
-    return HttpResponse('Halaman Django Pertama Rama')
+    return render(request, 'dashboard/index.html')
+def staff(request):
+    return render(request, 'staff.html')
