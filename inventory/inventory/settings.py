@@ -40,6 +40,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'dashboard.apps.DashboardConfig',
+    'user.apps.UserConfig',
+    'crispy_forms',
 ]
 
 MIDDLEWARE = [
@@ -102,6 +104,7 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 # Internationalization
 # https://docs.djangoproject.com/en/3.2/topics/i18n/
@@ -127,6 +130,14 @@ STATICFILES_DIRS = [
 ]
 
 STATIC_ROOT = (BASE_DIR/"asert/")
+
+MEDIA_ROOT = (BASE_DIR / 'media')
+
+MEDIA_URL = '/media/'
+
+LOGIN_REDIRECT_URL = 'dashboard-index'
+
+LOGIN_URL = 'user-login'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
